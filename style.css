@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: url(); /* Add your background image URL here */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    font-family: fantasy, sans-serif;
+  }
+  
+  #logo {
+    margin: 1px;
+    padding: 3px;
+    font-size: 250%;
+    width: 16%;
+    border-radius: 10%;
+  }
+  
+  
+  
+  body > header {
+    background-color: tomato;
+    color: aqua;
+    display: flex;
+    height: 20vh;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  #nav-ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  #nav-ul > li {
+    padding: 8px;
+    margin: 16px;
+  }
+  
+  .navbutton {
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    border: 1px solid white;
+    border-radius: 20%;
+  }
+  
+  #main-content {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  #main-content > div {
+    width: 70%;
+  }
+  
+  body > main article {
+    width: 60%;
+    margin: auto;
+    color: black;
+    border-color: aqua;
+  }
+  
+  form, h2 {
+    text-align: center;
+    color: black;
+  }
+  
+  img {
+    border-radius: 50%;
+  }
+  
+  /* Interactive Sidebar Styles */
+  .sidebar {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #f1f1f1;
+    transition: left 0.3s ease-in-out;
+    z-index: 1000;
+  }
+  
+  .sidebar.active {
+    left: 0;
+  }
+  
+  .sidebar-content {
+    padding: 20px;
+  }
+  
+  .sidebar-toggle {
+    position: absolute;
+    top: 10px;
+    right: -40px;
+    width: 40px;
+    height: 40px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .sidebar-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 2px 0;
+  }
+  
+  #main-content {
+    transition: margin-left 0.3s ease-in-out;
+  }
+  
+  #main-content.sidebar-active {
+    margin-left: 250px;
+  }
+  
+  /* Footer Styling */
+  footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    width: 100%;
+    text-align: center;
+  }
+  
+  footer h2 {
+    color: #ffcc00;
+    margin-bottom: 15px;
+    font-size: 24px;
+  }
+  
+  footer nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+  
+  footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 20px;
+    display: flex;
+    gap: 20px;
+  }
+  
+  footer ul li {
+    display: inline;
+  }
+  
+  footer ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+    font-size: 16px;
+  }
+  
+  footer ul li a:hover {
+    color: #ffcc00;
+  }
+  
+  /* Footer responsive for smaller devices */
+  @media (max-width: 768px) {
+    footer nav {
+        flex-direction: column;
+    }
+  
+    footer ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+  }
+  
